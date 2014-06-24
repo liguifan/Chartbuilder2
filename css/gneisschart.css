@@ -1,0 +1,109 @@
+/* 
+// Make sure to change the name of the font 
+// in the webfont.js loader in index.html
+*/
+
+@font-face {
+font-family: 'Franklin Gothic Book';
+font-style: normal;
+font-weight: normal;
+src: local('Franklin Gothic Book'), url('fonts/FRABK.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Franklin Gothic Book Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Franklin Gothic Book Italic'), url('fonts/FRABKIT.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Franklin Gothic Demi Cond';
+font-style: normal;
+font-weight: normal;
+src: local('Franklin Gothic Demi Cond'), url('http://carolchennn.github.io/Chartbuilder/fonts/FGDCD.woff') format('woff');
+}
+
+svg {
+	font-size: 14px;
+}
+
+svg #ground {
+	fill: #fff;
+	stroke: none;
+}
+
+svg #plotArea {
+	fill: none;
+	stroke: none;
+}
+
+svg .axis line {
+	fill: none;
+	shape-rendering: crispEdges;
+}
+
+svg .axis g.zero line {
+		stroke: #666666;
+}
+
+svg #xAxis line {
+	stroke: #e6e6e6;
+}
+
+svg #xAxis{
+	fill: #666666;
+}
+
+svg .axis path {
+	stroke: none;
+	fill: none;
+}
+
+svg .axis text {
+	font-family: 'Franklin Gothic Demi Cond', Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+svg .legendItem text {
+	font-family: 'Franklin Gothic Demi Cond', Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+svg text.metaText {
+	font-family: 'Franklin Gothic Book', Helvetica, sans-serif;
+	font-size:  10px;
+	text-rendering:   optimizeLegibility;
+	fill:  #999999;
+}
+
+svg text.bargridLabel {
+	font-family: 'Franklin Gothic Demi Cond', Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+svg text.barLabel {
+	font-family: 'Franklin Gothic Demi Cond', Helvetica, sans-serif;
+}
+
+/*Default styling of series*/
+
+svg path.seriesLine {
+	stroke-width: 3px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	fill: none;
+}
+
+svg .seriesScatter circle {
+	stroke:#fff;
+	stroke-width:1;
+}
+	
+#titleLine {
+	font-family: 'Franklin Gothic Demi Cond', Helvetica, sans-serif;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-size:16px;
+	fill: #666666;
+}
