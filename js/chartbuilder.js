@@ -392,8 +392,7 @@ ChartBuilder = {
 		var styleEl = document.createElement("style");
 		defsEl.appendChild(styleEl);
 		styleEl.setAttribute("type", "text/css");
-        var logo = document.getElementById("ALMlogo").clone();
-        svg.appendChild(logo);
+
 		// removing attributes so they aren't doubled up
 		svg.removeAttribute("xmlns");
 		svg.removeAttribute("xlink");
