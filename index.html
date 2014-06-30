@@ -26,6 +26,8 @@
                                                     
                                                     function flip() {
                                                         ALMlogo.src = ColorSelect.children[ColorSelect.selectedIndex].getAttribute('src');
+                                                        SvgLogo.data = ColorSelect.children[ColorSelect.selectedIndex].getAttribute('src');
+
                                                     }
                                                 
                                                     </script>
@@ -40,8 +42,8 @@
                             
                             <div id="chartContainer">
                             </div>
-                            <object id="ALMlogo" data="images/NLJ.svg" alt="logo" type="image/svg+xml"></object>
-                            
+                            <img id="ALMlogo" src="images/NLJ.svg" alt="logo"/>
+                            <object id="SvgLogo" data="images/NLJ.svg" alt="logosvg" type="image/svg+xml"></object>
                         </div>
                         
                         <canvas id="canvas" width="1200px" height="676px"></canvas>
