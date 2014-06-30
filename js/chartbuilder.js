@@ -315,7 +315,7 @@ ChartBuilder = {
         logo.style.width = '200%'
         canvasContext.drawSvg(svg,0,0);
         var height = $("#chartContainer").height()* 2
-        canvasContext.drawSvg(logo,0,height);
+        canvasContext.drawImg(logo,0,height);
 
 		
 		var filename = [];
