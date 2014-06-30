@@ -311,9 +311,11 @@ ChartBuilder = {
         var svg1 = $.trim(document.getElementById("chartContainer").innerHTML);
         var logoraw = document.getElementById("ALMlogo");
         var logo = logoraw;
+        logo.style.width = '200%'
+        logo.style.width = '200%'
         canvasContext.drawSvg(svg,0,0);
         var height = $("#chartContainer").height()* 2
-        canvasContext.drawSvg(logo,0,height);
+        canvasContext.drawImage(logo,0,height);
 
 		
 		var filename = [];
