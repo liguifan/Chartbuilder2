@@ -2028,7 +2028,7 @@ function Gneiss(config)
 					.attr("y",18)
 					.attr("fill",function(d,i){return d.color? d.color : colors[i]})
 					.text(function(d,i){return d.name});
-                   .call(Gneiss.helper.wrap, g.width(); //fuck
+                   //.call(Gneiss.helper.wrap, g.width(); //fuck
 			
 			//if there is more than one line
 			if(g.series().length > 1) {
