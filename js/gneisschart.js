@@ -1852,7 +1852,17 @@ function Gneiss(config)
 
 				lineSeries.transition()
 					.duration(500)
-					.attr("d",function(d,j) { yAxisIndex = d.axis; pathString = g.yAxis()[d.axis].line(d.data).split("L0,0L").join("M0,0M").split("L0,0").join(""); return pathString;})
+					.attr("d",function(d,j) {
+                          lineSeriesDotGroups.selectAll("text")
+                          .data(function(d,i){return d.data})
+                          .text(function(d){return d})
+                          .attr("transform",function(d,i){
+                                yAxisIndex = d3.select(this.parentNode).data()[0].axis;
+                                var y = d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100;
+                                return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
+                                })
+                          
+                          yAxisIndex = d.axis; pathString = g.yAxis()[d.axis].line(d.data).split("L0,0L").join("M0,0M").split("L0,0").join(""); return pathString;})
 
 				lineSeries.exit().remove()
 			
@@ -1882,16 +1892,7 @@ function Gneiss(config)
 					.append("circle")
 					.attr("r",g.dotRadius())
 					.attr("transform",function(d,i){
-                          lineSeriesDotGroups.selectAll("text")
-                          .data(function(d,i){return d.data})
-                          .enter()
-                          .append("text")
-                          .text(function(d){return d})
-                          .attr("transform",function(d,i){
-                                yAxisIndex = d3.select(this.parentNode).data()[0].axis;
-                                var y = d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100;
-                                return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
-                                })
+                          
 
                           
 						yAxisIndex = d3.select(this.parentNode).data()[0].axis;
