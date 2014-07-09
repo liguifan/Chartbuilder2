@@ -709,7 +709,7 @@ function Gneiss(config)
 			.attr("x", g.padding().left)
 			.attr("id","titleLine")
 			.text(g.title())
-			.call(Gneiss.helper.wrap, g.width()-g.defaultPadding().left-g.defaultPadding().right));
+			.call(Gneiss.helper.wrap, 200);
 			
 			
 		
@@ -2028,7 +2028,7 @@ function Gneiss(config)
 					.attr("y",18)
 					.attr("fill",function(d,i){return d.color? d.color : colors[i]})
 					.text(function(d,i){return d.name});
-                    .call(Gneiss.helper.wrap, 20);
+                    //.call(Gneiss.helper.wrap, g.width()-g.defaultPadding().left-g.defaultPadding().right)); fuck
 			
 			//if there is more than one line
 			if(g.series().length > 1) {
