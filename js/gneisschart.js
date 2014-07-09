@@ -709,7 +709,7 @@ function Gneiss(config)
 			.attr("x", g.padding().left)
 			.attr("id","titleLine")
 			.text(g.title())
-			.call(Gneiss.helper.wrap, 200);
+			.call(Gneiss.helper.wrap, 200));
 			
 			
 		
