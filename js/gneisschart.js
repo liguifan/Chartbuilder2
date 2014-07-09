@@ -1151,7 +1151,7 @@ function Gneiss(config)
 		try{
 			//the title will always be the same distance from the top, and will always be the top most element
 			g.titleElement().attr("y",g.defaultPadding().top + g.titleElement()[0][0].getBoundingClientRect().height);
-            .call(Gneiss.helper.wrap, 200);
+            //.call(Gneiss.helper.wrap, 200);
 		}catch(e){/* There isn't a title element and I dont care to let you know */}
 
 		if(g.isBargrid()){
