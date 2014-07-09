@@ -1868,7 +1868,7 @@ function Gneiss(config)
                           .attr("transform",function(d,i){
                                 yAxisIndex = d3.select(this.parentNode).data()[0].axis;
                                 var y = d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100;
-                                return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
+                                return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i])+5 + "," + y+5+ ")";
                                 })
                           
                           yAxisIndex = d.axis; pathString = g.yAxis()[d.axis].line(d.data).split("L0,0L").join("M0,0M").split("L0,0").join(""); return pathString;})
