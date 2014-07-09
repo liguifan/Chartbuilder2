@@ -1812,7 +1812,11 @@ function Gneiss(config)
 				columnRects.transition()
 					.duration(500)
 					.attr("width",columnWidth)
-					.attr("height", function(d,i) {yAxisIndex = d3.select(this.parentNode).data()[0].axis; return Math.abs(g.yAxis()[yAxisIndex].scale(d) - g.yAxis()[yAxisIndex].scale(Gneiss.helper.columnXandHeight(d,g.yAxis()[yAxisIndex].scale.domain())))})
+					.attr("height", function(d,i) {
+                          
+                          
+                          
+                          yAxisIndex = d3.select(this.parentNode).data()[0].axis; return Math.abs(g.yAxis()[yAxisIndex].scale(d) - g.yAxis()[yAxisIndex].scale(Gneiss.helper.columnXandHeight(d,g.yAxis()[yAxisIndex].scale.domain())))})
 					.attr("x",g.xAxis().type =="date" ? 
 							function(d,i) {return g.xAxis().scale(g.xAxisRef()[0].data[i])  - columnWidth/2}:
 							function(d,i) {return g.xAxis().scale(i) - columnWidth/2}
@@ -1878,6 +1882,16 @@ function Gneiss(config)
 					.append("circle")
 					.attr("r",g.dotRadius())
 					.attr("transform",function(d,i){
+                          lineSeriesDotGroups.selectAll("text")
+                          .data(function(d,i){return d.data})
+                          .enter()
+                          .text(function(d){return d})
+                          .attr("transform",function(d,i){
+                                yAxisIndex = d3.select(this.parentNode).data()[0].axis;
+                                var y = d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100;
+                                return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
+                                })
+                          
 						yAxisIndex = d3.select(this.parentNode).data()[0].axis;
 							var y = d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100;
 							return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
