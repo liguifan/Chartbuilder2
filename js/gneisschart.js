@@ -1868,7 +1868,7 @@ function Gneiss(config)
                           .text(function(d){return d})
                           .attr("transform",function(d,i){
                                 yAxisIndex = d3.select(this.parentNode).data()[0].axis;
-                                var y = (d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100)-4;
+                                var y = (d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100)-10;
                                 return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
                                 })
                           
@@ -1928,7 +1928,7 @@ function Gneiss(config)
  					.text(function(d){return d})
  					.attr("transform",function(d,i){
  						yAxisIndex = d3.select(this.parentNode).data()[0].axis;
-                          var y = (d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100)-4;
+                          var y = (d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100)-10;
  							return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
  						})
 
