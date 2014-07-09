@@ -1822,7 +1822,7 @@ function Gneiss(config)
                                 function(d,i) {return g.xAxis().scale(g.xAxisRef()[0].data[i])}:
                                 function(d,i) {return g.xAxis().scale(i)}
                                 )
-                          .attr("y", function(d,i) {yAxisIndex = d3.select(this.parentNode).data()[0].axis; return (d || d ===0 ? (g.yAxis()[yAxisIndex]).scale(d) : -100)+4})
+                          .attr("y", function(d,i) {yAxisIndex = d3.select(this.parentNode).data()[0].axis; return (d || d ===0 ? (g.yAxis()[yAxisIndex]).scale(d) : -100)-4})
                           
                           
                           yAxisIndex = d3.select(this.parentNode).data()[0].axis; return Math.abs(g.yAxis()[yAxisIndex].scale(d) - g.yAxis()[yAxisIndex].scale(Gneiss.helper.columnXandHeight(d,g.yAxis()[yAxisIndex].scale.domain())))})
@@ -1845,7 +1845,7 @@ function Gneiss(config)
  							function(d,i) {return g.xAxis().scale(g.xAxisRef()[0].data[i])}:
  							function(d,i) {return g.xAxis().scale(i)}
  					)
-                .attr("y", function(d,i) {yAxisIndex = d3.select(this.parentNode).data()[0].axis; return (d || d ===0 ? (g.yAxis()[yAxisIndex]).scale(d) : -100)+4})
+                .attr("y", function(d,i) {yAxisIndex = d3.select(this.parentNode).data()[0].axis; return (d || d ===0 ? (g.yAxis()[yAxisIndex]).scale(d) : -100)-4})
                 
 
 				//add lines
@@ -1868,8 +1868,8 @@ function Gneiss(config)
                           .text(function(d){return d})
                           .attr("transform",function(d,i){
                                 yAxisIndex = d3.select(this.parentNode).data()[0].axis;
-                                var y = d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100;
-                                return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
+                                var y = (d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100)-4;
+                                return "translate("+ (g.xAxis().scale(g.xAxisRef()[0].data[i]))-4 + "," + y + ")";
                                 })
                           
                           yAxisIndex = d.axis; pathString = g.yAxis()[d.axis].line(d.data).split("L0,0L").join("M0,0M").split("L0,0").join(""); return pathString;})
@@ -1928,8 +1928,8 @@ function Gneiss(config)
  					.text(function(d){return d})
  					.attr("transform",function(d,i){
  						yAxisIndex = d3.select(this.parentNode).data()[0].axis;
- 							var y = d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100;
- 							return "translate("+ g.xAxis().scale(g.xAxisRef()[0].data[i]) + "," + y + ")";
+                            var y = (d || d ===0 ? g.yAxis()[yAxisIndex].scale(d) : -100)-4;
+ 							return "translate("+ (g.xAxis().scale(g.xAxisRef()[0].data[i]))-4 + "," + y + ")";
  						})
 
 					
