@@ -271,7 +271,7 @@ Gneiss.helper = {
 				word,
 				line = [],
 				lineNumber = 0,
-				lineHeight = 1.2, // ems
+				lineHeight = 10.2, // ems
 				y = text.attr("y"),
 				x = text.attr("x"),
 				dy = parseFloat(text.attr("dy")) || 0,
@@ -708,7 +708,7 @@ function Gneiss(config)
 			.attr("x", g.padding().left)
 			.attr("id","titleLine")
 			.text(g.title())
-			.call(Gneiss.helper.wrap,100)); //fuck
+			.call(Gneiss.helper.wrap, 100)); //fuck
 			
 			
 		
