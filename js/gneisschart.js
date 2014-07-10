@@ -703,13 +703,12 @@ function Gneiss(config)
 		//group the series by their type
 		g.seriesByType(this.splitSeriesByType(g.series()));
 		this.updateGraphPropertiesBasedOnSeriesType(g, g.seriesByType());
-		console.log(g.width()-g.defaultPadding().left-g.defaultPadding().right);
 		g.titleElement(g.chartElement().append("text")
 			.attr("y",18)
 			.attr("x", g.padding().left)
 			.attr("id","titleLine")
 			.text(g.title())
-			.call(Gneiss.helper.wrap,g.width()-g.defaultPadding().left-g.defaultPadding().right)); //fuck
+			.call(Gneiss.helper.wrap,100)); //fuck
 			
 			
 		
