@@ -708,6 +708,7 @@ function Gneiss(config)
 			.attr("x", g.padding().left)
 			.attr("id","titleLine")
 			.text(g.title())
+            .selectAll()
 			.call(Gneiss.helper.wrap, 100)); //fuck
 			
 			
