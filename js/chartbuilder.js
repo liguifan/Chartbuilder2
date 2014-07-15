@@ -311,7 +311,7 @@ ChartBuilder = {
         var logoraw = document.getElementById("ALMlogo");
         var logo =  logoraw.cloneNode(true);
         var svg = svg1.cloneNode(true);
-        svg.attr("width", "50%").attr("height", "50%");
+      //  svg.attr("width", "50%").attr("height", "50%");
 
         logo.style.width = '200%'
         logo.style.width = '200%'
