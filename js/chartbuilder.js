@@ -307,10 +307,10 @@ ChartBuilder = {
 		canvas.height = $("#chartbigContainer").height()* 2 + 65;
         var canvasContext = canvas.getContext("2d");
 
-        var svg = $.trim(document.getElementById("chartContainer").innerHTML);
         var svg1 = $.trim(document.getElementById("chartContainer").innerHTML);
         var logoraw = document.getElementById("ALMlogo");
         var logo =  logoraw.cloneNode(true);
+        var svg = svg1.cloneNode(true);
         logo.style.width = '200%'
         logo.style.width = '200%'
         canvasContext.drawSvg(svg,0,0);
