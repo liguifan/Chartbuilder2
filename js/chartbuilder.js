@@ -319,12 +319,14 @@ ChartBuilder = {
         var logoraw = document.getElementById("ALMlogo");
         var logo =  logoraw.cloneNode(true);
        // var svg = svg1.cloneNode(true);
-        logo.height = (logo.height/4);
-        logo.width = (logo.width/4);
+        var h = (logo.height/2);
+        console.log(h);
+        var w = (logo.width/2);
+        console.log(h);
 
         canvasContext.drawSvg(svg,0,0);
         var height = $("#chartContainer").height();
-        canvasContext.drawImage(logo,0,height);
+        canvasContext.drawImage(logo,0,height,w,h);
 
 		
 		var filename = [];
