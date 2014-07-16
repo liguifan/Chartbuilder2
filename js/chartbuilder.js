@@ -320,8 +320,8 @@ ChartBuilder = {
         var logo =  logoraw.cloneNode(true);
        // var svg = svg1.cloneNode(true);
         
-        logo.style.width = '200%'
-        logo.style.width = '200%'
+        logo.style.width = '100%'
+        logo.style.height = '50%'
         canvasContext.drawSvg(svg,0,0);
         var height = $("#chartContainer").height();
         canvasContext.drawImage(logo,0,height);
