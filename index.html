@@ -82,6 +82,12 @@
                         
                         <div class="optionBlock">
                             <h2>3. Chart Options</h2>
+                            <div id="formExport">
+                                <select id="FormOption">
+                                    <option value="1200">Width: 1200px</option>
+                                    <option value="600">Width: 600px</option>
+                                </select>
+                            </div>
     						<div class="optionGroup"><label for="chart_title">Title</label><input type="text" name="chart_title" value="" id="chart_title"></div>
     						<div class="optionGroup"><label for="credit">Credit</label><input id="creditLine" type="text" name="credit" value="Made with Chartbuilder"></div>
     						<div class="optionGroup"><label for="source">Source</label><input id="sourceLine" type="text" name="source" value="Data: ">
@@ -158,12 +164,7 @@
                         </div>
                         <div class="optionBlock">
                             <h2>6. Logo Options</h2>
-                            <div id="formExport">
-                                <select id="FormOption">
-                                    <option value="1200">Width: 1200px</option>
-                                    <option value="600">Width: 600px</option>
-                                </select>
-                            </div>
+                            
                             <div id="form">
                                 <select id="ColorSelect" onchange="javascript:flip();">
                                     <option src="images/NLJ.svg"  value='NLJ'>National Law Journal</option>
