@@ -311,7 +311,10 @@ ChartBuilder = {
         var svg1 = document.getElementById("chartContainer");
         var svg2 = svg1.cloneNode(true);
         var child = svg2.firstChild;
+        console.log(child);
         child.setAttribute("transform", "scale(0,0.5)");
+        console.log(child);
+
         console.log(svg2);
 
         var svg = $.trim(svg2.innerHTML);
