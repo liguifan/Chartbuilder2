@@ -320,9 +320,11 @@ ChartBuilder = {
         var logo =  logoraw.cloneNode(true);
        // var svg = svg1.cloneNode(true);
         var h = (logo.height/2);
+        console.log(logo.height);
+
         console.log(h);
         var w = (logo.width/2);
-        console.log(h);
+        console.log(w);
 
         canvasContext.drawSvg(svg,0,0);
         var height = $("#chartContainer").height();
