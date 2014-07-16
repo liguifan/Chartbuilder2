@@ -304,7 +304,7 @@ ChartBuilder = {
         
         var canvas = document.getElementById("canvas");
 		canvas.width = $("#chartContainer").width();
-		canvas.height = $("#chartbigContainer").height() ;
+		canvas.height = $("#chartbigContainer").height();
         var canvasContext = canvas.getContext("2d");
 
         
@@ -323,7 +323,7 @@ ChartBuilder = {
         logo.style.width = '200%'
         logo.style.width = '200%'
         canvasContext.drawSvg(svg,0,0);
-        var height = $("#chartContainer").height()* 2;
+        var height = $("#chartContainer").height();
         canvasContext.drawImage(logo,0,height);
 
 		
