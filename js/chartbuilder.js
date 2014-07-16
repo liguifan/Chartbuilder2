@@ -304,14 +304,14 @@ ChartBuilder = {
         
         var canvas = document.getElementById("canvas");
 		canvas.width = $("#chartContainer").width();
-		canvas.height = $("#chartbigContainer").height()* 2 ;
+		canvas.height = $("#chartbigContainer").height() ;
         var canvasContext = canvas.getContext("2d");
 
         
         var svg1 = document.getElementById("chartContainer");
         var svg2 = svg1.cloneNode(true);
         var child = svg2.firstElementChild;
-        child.setAttribute("transform", "scale(0,2)");
+        child.setAttribute("transform", "scale(0,0)");
 
         console.log(svg2);
 
