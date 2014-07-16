@@ -319,9 +319,8 @@ ChartBuilder = {
         var logoraw = document.getElementById("ALMlogo");
         var logo =  logoraw.cloneNode(true);
        // var svg = svg1.cloneNode(true);
-        
-        logo.style.height = '50%'
-        logo.style.width = 'auto'
+        logo.height = (logo.height/2);
+        logo.width = (logo.width/2);
 
         canvasContext.drawSvg(svg,0,0);
         var height = $("#chartContainer").height();
