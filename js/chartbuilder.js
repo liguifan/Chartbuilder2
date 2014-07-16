@@ -310,7 +310,8 @@ ChartBuilder = {
         
         var svg1 = document.getElementById("chartContainer");
         var svg2 = svg1.cloneNode(true);
-        svg2.setAttribute("transform", "scale(100% 50%)");
+        svg2.setAttribute("transform", "scale(0 0.5)");
+        console.log(svg2);
 
         var svg = $.trim(svg2.innerHTML);
         var logoraw = document.getElementById("ALMlogo");
@@ -417,7 +418,7 @@ ChartBuilder = {
         }
         var source = (new XMLSerializer()).serializeToString(svg).replace('</style>', '<![CDATA[' + styles + ']]></style>');
 
-        console.log(source);
+        //console.log(source);
 
         
 
