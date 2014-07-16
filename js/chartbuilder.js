@@ -304,7 +304,7 @@ ChartBuilder = {
         
         var canvas = document.getElementById("canvas");
 		canvas.width = $("#chartContainer").width();
-		canvas.height = $("#chartbigContainer").height();
+		canvas.height = $("#chartbigContainer").height()+36;
         var canvasContext = canvas.getContext("2d");
 
         
