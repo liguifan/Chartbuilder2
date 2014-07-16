@@ -300,8 +300,11 @@ ChartBuilder = {
     
 	createChartImage: function() {
         var callback_flag = false;
-        console.log("test");
-        
+        console.log("start");
+        /////////////////////
+        var input = 1200
+        var ratio = input/600;// this is where to modify e.g.   600/1200
+        ////////////////////////
         var canvas = document.getElementById("canvas");
 		canvas.width = $("#chartContainer").width();
 		canvas.height = $("#chartbigContainer").height();
@@ -311,7 +314,7 @@ ChartBuilder = {
         var svg1 = document.getElementById("chartContainer");
         var svg2 = svg1.cloneNode(true);
         var child = svg2.firstElementChild;
-        child.setAttribute("transform", "scale(1,1)");
+        child.setAttribute("transform", "scale("+ratio+")");
 
         console.log(svg2);
 
@@ -319,11 +322,11 @@ ChartBuilder = {
         var logoraw = document.getElementById("ALMlogo");
         var logo =  logoraw.cloneNode(true);
        // var svg = svg1.cloneNode(true);
-        var h = (logo.height/2);
+        var h = (logo.height/(ratio/2));
         console.log(logo.height);
 
         console.log(h);
-        var w = (logo.width/2);
+        var w = (logo.width/(ratio/2));
         console.log(w);
 
         canvasContext.drawSvg(svg,0,0);
