@@ -308,7 +308,7 @@ ChartBuilder = {
         var canvasContext = canvas.getContext("2d");
 
         
-        var svg1 = document.getElementById("chartContainer").innerHTML;
+        var svg1 = document.getElementById("chartContainer");
         var svg = $.trim(document.getElementById("chartContainer").innerHTML);
         var logoraw = document.getElementById("ALMlogo");
         var logo =  logoraw.cloneNode(true);
