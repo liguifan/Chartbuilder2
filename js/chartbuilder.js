@@ -309,12 +309,14 @@ ChartBuilder = {
 
         
         var svg1 = document.getElementById("chartContainer");
-        var svg = $.trim(document.getElementById("chartContainer").innerHTML);
+        var svg2 = svg1.cloneNode(true);
+        svg2.setAttribute("transform", "scale(50% 50%)");
+
+        var svg = $.trim(svg2.innerHTML);
         var logoraw = document.getElementById("ALMlogo");
         var logo =  logoraw.cloneNode(true);
        // var svg = svg1.cloneNode(true);
-        svg1.setAttribute("transform", "scale(50% 50%)");
-
+        
         logo.style.width = '200%'
         logo.style.width = '200%'
         canvasContext.drawSvg(svg,0,0);
