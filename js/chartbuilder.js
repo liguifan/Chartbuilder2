@@ -303,7 +303,7 @@ ChartBuilder = {
         console.log("test");
         
         var canvas = document.getElementById("canvas");
-		canvas.width = $("#chartContainer").width() * 2;
+		canvas.width = $("#chartContainer").width();
 		canvas.height = $("#chartbigContainer").height()* 2 ;
         var canvasContext = canvas.getContext("2d");
 
@@ -311,10 +311,7 @@ ChartBuilder = {
         var svg1 = document.getElementById("chartContainer");
         var svg2 = svg1.cloneNode(true);
         var child = svg2.firstElementChild;
-        console.log(svg2);
-        console.log(child);
-        child.setAttribute("transform", "scale(0,0.5)");
-        console.log(child);
+        child.setAttribute("transform", "scale(0,2)");
 
         console.log(svg2);
 
