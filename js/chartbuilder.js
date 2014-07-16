@@ -310,7 +310,7 @@ ChartBuilder = {
         
         var svg1 = document.getElementById("chartContainer");
         var svg2 = svg1.cloneNode(true);
-        svg2.setAttribute("transform", "scale(0,0.5)");
+        svg2.childNodes[0].setAttribute("transform", "scale(0,0.5)");
         console.log(svg2);
 
         var svg = $.trim(svg2.innerHTML);
@@ -320,7 +320,7 @@ ChartBuilder = {
         
         logo.style.width = '200%'
         logo.style.width = '200%'
-        canvasContext.drawSvg(svg2,0,0);
+        canvasContext.drawSvg(svg,0,0);
         var height = $("#chartContainer").height()* 2;
         canvasContext.drawImage(logo,0,height);
 
