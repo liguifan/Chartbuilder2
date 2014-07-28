@@ -306,8 +306,8 @@ ChartBuilder = {
         var ratio = input/600;// this is where to modify e.g.   600/1200
         ////////////////////////
         var canvas = document.getElementById("canvas");
-		canvas.width = $("#chartContainer").width();
-		canvas.height = $("#chartbigContainer").height();
+		canvas.width = $("#chartContainer").width()*2;
+		canvas.height = $("#chartbigContainer").height()*2;
         var canvasContext = canvas.getContext("2d");
 
         
