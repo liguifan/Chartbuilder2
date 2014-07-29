@@ -708,13 +708,14 @@ function Gneiss(config)
 			.attr("x", g.padding().left)
 			.attr("id","titleLine")
             .text(g.title()));
-        
+        console.log("FUCK");
 		g.titleElement(g.chartElement().append("text")
                        .attr("y",39)
                        .attr("x", g.padding().left)
                        .attr("id","titleLine2")
                        .text(g.title()));
-			
+        console.log("FUCK2");
+
 		
 		this.calculateColumnWidths()
 			.setYScales()
