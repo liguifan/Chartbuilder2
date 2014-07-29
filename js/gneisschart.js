@@ -856,7 +856,7 @@ function Gneiss(config)
 		//Add the height of the title line to the padding, if the title line has a height
 		//Add the height of the axis label if there is no title
 		title_height = g.titleElement()[0][0].getBoundingClientRect().height;
-        title_height = title_height*3;
+        title_height = title_height*5;
 		axis_label_height = d3.selectAll(".yAxis text")[0][0].getBoundingClientRect().height;
 
 		padding_top += title_height > 0? title_height + g.titleBottomMargin() : axis_label_height + g.titleBottomMargin();
