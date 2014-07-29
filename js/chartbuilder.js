@@ -1113,6 +1113,8 @@ ChartBuilder.start = function(config) {
 	
 	$("#chart_title").keyup(function() {
 		var val = $(this).val();
+        val = val.length > 12 ? val.substring(0,12) + "..." : val;
+
 		chart.title(val);
 		chart.resize()
 			.setPadding();
@@ -1120,7 +1122,7 @@ ChartBuilder.start = function(config) {
 		chart.setYScales()
 			.redraw();
 		ChartBuilder.makeLegendAdjustable();
-		
+
 		chart.titleElement().text(chart.title());
 	});
 	
