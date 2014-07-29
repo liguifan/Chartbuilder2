@@ -2030,7 +2030,7 @@ function Gneiss(config)
 			//add legend to chart
 			var legendGroups = g.legendItemContainer.selectAll("g")
 				.data(g.series());
-            var tempheight = g.subtitleElement().text().length != 0 ? title_height: 0;
+            var tempheight = g.subtitleElement().text().length != 0 ? title_height*0.8: 0;
 
 			var legItems = 	legendGroups.enter()
 				.append("g")
