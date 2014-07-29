@@ -296,6 +296,7 @@ function Gneiss(config)
 	var containerElement;
 	var chartElement;
 	var titleElement;
+    var subtitleElement;
 	var footerElement;
 	var sourceElement;
 	var creditElement;
@@ -427,6 +428,12 @@ function Gneiss(config)
 			return titleElement;
 		}
 		titleElement = elem;
+	};
+    this.subtitleElement = function Gneiss$subtitleElement(elem) {
+		if (!arguments.length) {
+			return subtitleElement;
+		}
+		subtitleElement = elem;
 	};
 	
 	this.source = function Gneiss$sourceLineText(s) {
