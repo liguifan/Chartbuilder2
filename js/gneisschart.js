@@ -2035,8 +2035,9 @@ function Gneiss(config)
 			var legItems = 	legendGroups.enter()
 				.append("g")
 				.attr("class","legendItem")
-            //fuck
+            /////////////////////////fuck
 				.attr("transform","translate("+g.padding().left+","+(g.defaultPadding().top + g.titleElement()[0][0].getBoundingClientRect().height+tempheight) +")");
+            /////////////////////////fuck
 
 			legendGroups.exit().remove()
 
