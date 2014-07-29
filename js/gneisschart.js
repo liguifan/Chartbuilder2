@@ -872,7 +872,7 @@ function Gneiss(config)
 		title_height = g.titleElement()[0][0].getBoundingClientRect().height;
         ///////////////////////fuck
         console.log("subtitle height = "+g.subtitleElement().text().length);
-        title_height = g.subtitleElement().text().length != 0 ? title_height *3: title_height;
+        title_height = g.subtitleElement().text().length != 0 ? title_height *2: title_height;
         ///////////////////////fuck
 
 		axis_label_height = d3.selectAll(".yAxis text")[0][0].getBoundingClientRect().height;
@@ -2042,7 +2042,7 @@ function Gneiss(config)
 					.filter(function(){return g.series().length > 1})
 					.attr("class","legendLabel")
 					.attr("x",12)
-					.attr("y",18)
+					.attr("y",88)
 					.attr("fill",function(d,i){return d.color? d.color : colors[i]})
 					.text(function(d,i){return d.name});
                        
