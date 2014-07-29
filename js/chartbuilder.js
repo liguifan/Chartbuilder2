@@ -1110,10 +1110,10 @@ ChartBuilder.start = function(config) {
 		chart.source(val);
 		chart.sourceElement().text(chart.source());
 	});
-	
+	//////////////////////fuck
 	$("#chart_title").keyup(function() {
 		var val = $(this).val();
-        val = val.length > 12 ? val.substring(0,12) + "..." : val;
+        val = val.length > 48 ? val.substring(0,48) + "..." : val;
 
 		chart.title(val);
 		chart.resize()
@@ -1124,11 +1124,24 @@ ChartBuilder.start = function(config) {
 		ChartBuilder.makeLegendAdjustable();
 
 		chart.titleElement().text(chart.title());
-        chart.subtitleElement().text("subtitle");
-
-                            
 	});
-	
+                    
+    $("#chart_subtitle").keyup(function() {
+        var val = $(this).val();
+        val = val.length > 48 ? val.substring(0,48) + "..." : val;
+        chart.title(val);
+        chart.resize()
+        .setPadding();
+        ChartBuilder.setChartArea();
+        chart.setYScales()
+        .redraw();
+        ChartBuilder.makeLegendAdjustable();
+        chart.subtitleElement().text(chart.title());
+        });
+              
+	///////////////////////fuck
+                    
+                    
 	$(".downloadLink").click(function() {
 		$("#downloadLinksDiv").toggleClass("hide");
 	});
