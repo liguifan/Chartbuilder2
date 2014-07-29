@@ -718,10 +718,10 @@ function Gneiss(config)
         ///////////////////////fuck
 
 		g.subtitleElement(g.chartElement().append("text")
-                       .attr("y",39)
-                       .attr("x", g.padding().left)
-                       .attr("id","titleLine2")
-                       .text(g.title()));
+           .attr("y",39)
+           .attr("x", g.padding().left)
+           .attr("id","titleLine2")
+           .text(g.title()));
 
         ///////////////////////fuck
 
@@ -2030,11 +2030,13 @@ function Gneiss(config)
 			//add legend to chart
 			var legendGroups = g.legendItemContainer.selectAll("g")
 				.data(g.series());
+            var tempheight = g.subtitleElement().text().length != 0 ? title_height: 0;
 
 			var legItems = 	legendGroups.enter()
 				.append("g")
 				.attr("class","legendItem")
-				.attr("transform","translate("+g.padding().left+","+(g.defaultPadding().top + g.titleElement()[0][0].getBoundingClientRect().height) +")");
+            //fuck
+				.attr("transform","translate("+g.padding().left+","+(g.defaultPadding().top + g.titleElement()[0][0].getBoundingClientRect().height+tempheight) +")");
 
 			legendGroups.exit().remove()
 
@@ -2042,7 +2044,7 @@ function Gneiss(config)
 					.filter(function(){return g.series().length > 1})
 					.attr("class","legendLabel")
 					.attr("x",12)
-					.attr("y",88)
+					.attr("y",18)
 					.attr("fill",function(d,i){return d.color? d.color : colors[i]})
 					.text(function(d,i){return d.name});
                        
